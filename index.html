@@ -1,24 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
-    <link type="text/css" rel="stylesheet" src="css.css">
-    <link type="text/javascript" rel="script" src="functions.js">
+    
+    <link rel="shortcut icon" href="">
+    
+    <script type="text/javascript" src="functions.js"></script>  
+     <link type="text/css" rel="stylesheet" href="css.css">
+     
   </head>
   
   <body>
     <div id="main" class="mainDiv">
     <p class="mainText"> Enter phrase to Translate:</p>
-    <input type="text" id="search" class="mainField" placeholder="The Rabbit jumped over the 
-
-towering wall." onkeypress="handle(event)">
+    <input type="text" id="search" class="mainField" placeholder="The Rabbit jumped over the towering wall." onkeypress="handle(event)">
     <br>
       <button id="btn" class="mainBtn" onClick="trans()">Translate</button>
       
     </div>
     <div id = "update" class="newsDiv"> </div>
     <div id="img" class="divF">
-    
-    <img src="" id="trump"></img>
+    <img src="" id="trump" alt="trump">
     <h2 id="reply" class="trumpText"></h2>
     </div>
   </body>
