@@ -1,27 +1,25 @@
-
 <html>
-    <head>
-
-    <link rel="shortcut icon" href="">
-   <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <link type="text/css" rel="stylesheet" href="css.css">
-   <link type="text/javascript" rel="script" href="functions.js">
-    <style>
-   
-    </style>
-    </head>
-    <body>
-        <script type="text/javascript" src="functions.js">
-            
-            document.write("blah");
-            </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
-            
-      <p id="test">a</p>
-        
-      <div id="newsfeed">NEWS FEED<br></div>
-        
-        
-    </body>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+  </head>
+  
+  <body>
+    <div id="main" class="mainDiv">
+    <p class="mainText"> Enter phrase to Translate:</p>
+    <input type="text" id="search" class="mainField" placeholder="The Rabbit jumped over the towering wall." onkeypress="handle(event)">
+    <br>
+      <button id="btn" class="mainBtn" onClick="trans()">Translate</button>
+      
+    </div>
+    <div id = "update" class="newsDiv"> </div>
+    <div id="img" class="divF">
+    
+    <img src="" id="trump"></img>
+    <h2 id="reply" class="trumpText"></h2>
+    </div>
+  </body>
+  
+  
+  
+  
 </html>
