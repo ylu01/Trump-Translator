@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//flags
+var hasImg = 0;
 function handle(e){
         if(e.keyCode === 13){
             e.preventDefault(); // Ensure it is only this code that rusn
             var text;
           
-document.getElementById("trump").src="http://i1281.photobucket.com/albums/a515/iamyangandirule/0b9dd21d-b3e5-49b5-8d76-0af97303ece2_zpspitffegp.jpg";    //document.getElementById("input").innerHTML = document.getElementById("search").value;
+//document.getElementById("trump").src="trump.jpg";    //document.getElementById("input").innerHTML = document.getElementById("search").value;
           
 text = document.getElementById("search").value;
 var arr = text.split(" ");
@@ -60,24 +62,23 @@ else{
 }
 }
 
-          
+//I HAVE to use document.getElementById because append will keep adding onto the text, which would be the wrong result. 
  var final = '';
  final = newArr.join(" ");
  var final1 = '"' + final + '"';
- 
-          document.getElementById("reply").style.top="0px";
- if(final.length >= 100){
-  document.getElementById("reply").style.top="-80px";
- }
-  else if(final.length >= 90){
-  document.getElementById("reply").style.top="-30px";
+ if(hasImg === 0){
+    var newImg = document.createElement("img");
+    newImg.src = "trump.jpg";
+    newImg.setAttribute("id", "trump");
+    document.getElementById("img").appendChild(newImg);
+    document.getElementById("reply").innerHTML = final1;
+    hasImg = 1; //now the has image flag says yes.
   }
-  else if(final.length >= 80){
-  document.getElementById("reply").style.top="-20px";
-  }
- document.getElementById("reply").innerHTML = final1;
-        }
+  else{
+    document.getElementById("reply").innerHTML = final1;
     }
+    }
+}
 /////////////////////////////////////
 function trans(){
    var text;
@@ -113,14 +114,25 @@ document.getElementById("update").innerHTML = "What you typed: " + document.getE
           
           var final = '';
           final = newArr.join(" ");
-document.getElementById("trump").src="http://i1281.photobucket.com/albums/a515/iamyangandirule/0b9dd21d-b3e5-49b5-8d76-0af97303ece2_zpspitffegp.jpg";  
- 
- var final1 = '"' + final + '"';
-  if(final.length >= 100){
-  document.getElementById("reply").style.top="-100px";
+          
+           var final1 = '"' + final + '"';
+ //document.getElementById("reply").innerHTML = final1;
+//document.getElementById("trump").src="trump.jpg";  
+
+  if(hasImg === 0){
+    var newImg = document.createElement("img");
+    newImg.src = "trump.jpg";
+    newImg.setAttribute("id", "trump");
+    document.getElementById("img").appencChild(newImg);
+    document.getElementById("reply").innerHTML = final1;
+    hasImg = 1; //now the has image flag says yes.
   }
- 
- document.getElementById("reply").innerHTML = final1;
+  else{
+    document.getElementById("reply").innerHTML = final1;
+    }
+  
+
+ //document.getElementById("reply").innerHTML = final1;
 //the rabbit jumped over the freaking wall 
 }
 
