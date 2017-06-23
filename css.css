@@ -24,7 +24,10 @@ img{
 .mainDiv{
   width:250px;
   height:100px;
-  background-color:teal;
+  background: -webkit-linear-gradient(top, #65a9d7, #dae2e8);
+  background: -moz-linear-gradient(top, #dddddd, #dae2e8);
+  background: -ms-linear-gradient(top, #dddddd, #dae2e8);
+  background: -o-linear-gradient(top, #dddddd, #dae2e8);
   border-radius:25px;
 }
 .mainText{
