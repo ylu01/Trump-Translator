@@ -123,7 +123,7 @@ document.getElementById("update").innerHTML = "What you typed: " + document.getE
     var newImg = document.createElement("img");
     newImg.src = "trump.jpg";
     newImg.setAttribute("id", "trump");
-    document.getElementById("img").appencChild(newImg);
+    document.getElementById("img").appendChild(newImg);
     document.getElementById("reply").innerHTML = final1;
     hasImg = 1; //now the has image flag says yes.
   }
